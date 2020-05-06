@@ -16,12 +16,17 @@ const renderEmployees = (employees) => {
         const employeeCard = document.createElement('div');
         employeeCard.className = 'employee-card';
 
+        const avatar = document.createElement('img');
+        avatar.className = 'avatar';
+        avatar.src = employee.avatar;
+
         const name = document.createElement('p');
-        name.innerHTML = `Name: ${employee.first_name} ${employee.last_name}`;
+        name.innerHTML = `${employee.first_name} ${employee.last_name}`;
 
         const email = document.createElement('p');
-        email.innerHTML = `Email: ${employee.email}`;
+        email.innerHTML = `${employee.email}`;
 
+        employeeCard.appendChild(avatar);
         employeeCard.appendChild(name);
         employeeCard.appendChild(email);
 

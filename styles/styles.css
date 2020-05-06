@@ -182,12 +182,16 @@ h1 {
     background-color: #fff;
     padding: 0.5em 1em;
     border-radius: 10px;
-    display: grid;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
 }
 
 .employee-card:last-child {
     margin-bottom: 0;
+}
+
+.avatar {
+    border-radius: 50%;
 }
 
 /* Media Queries */
