@@ -4,7 +4,7 @@ const getEmployees = async () => {
 };
 
 const getEmployeeData = async () => {
-    const req = await fetch('http://dummy.restapiexample.com/api/v1/employees');
+    const req = await fetch('https://reqres.in/api/users?page=2');
     const data = await req.json();
     return data;
 };
@@ -14,25 +14,17 @@ const renderEmployees = (employees) => {
     console.log(employeesGrid);
 
     employees.forEach((employee) => {
-        console.log(employee);
         const employeeCard = document.createElement('div');
         employeeCard.className = 'employee-card';
 
         const name = document.createElement('p');
-        name.className = 'name';
-        name.innerHTML = `Name: ${employee.employee_name}`;
+        name.innerHTML = `Name: ${employee.first_name} ${employee.last_name}`;
 
-        const age = document.createElement('p');
-        age.className = 'age';
-        age.innerHTML = `Age: ${employee.employee_age}`;
-
-        const salary = document.createElement('p');
-        salary.className = 'salary';
-        salary.innerHTML = `Salary: $${employee.employee_salary}`;
+        const email = document.createElement('p');
+        age.innerHTML = `Email: ${employee.email}`;
 
         employeeCard.appendChild(name);
-        employeeCard.appendChild(age);
-        employeeCard.appendChild(salary);
+        employeeCard.appendChild(email);
 
         employeesGrid.appendChild(employeeCard);
     });
