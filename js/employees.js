@@ -11,7 +11,6 @@ const getEmployeeData = async () => {
 
 const renderEmployees = (employees) => {
     const employeesGrid = document.querySelector('.employees-grid');
-    console.log(employeesGrid);
 
     employees.forEach((employee) => {
         const employeeCard = document.createElement('div');
@@ -21,7 +20,7 @@ const renderEmployees = (employees) => {
         name.innerHTML = `Name: ${employee.first_name} ${employee.last_name}`;
 
         const email = document.createElement('p');
-        age.innerHTML = `Email: ${employee.email}`;
+        email.innerHTML = `Email: ${employee.email}`;
 
         employeeCard.appendChild(name);
         employeeCard.appendChild(email);
