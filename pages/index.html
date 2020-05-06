@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hawaii Emergency</title>
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <script src="../js/hawaii.js" defer></script>
+    </head>
+    <body>
+        <div id="hawaii-bg">
+            <nav class="nav">
+                <ul>
+                    <li><a href="/pages">Question 1</a></li>
+                    <li><a href="/pages/swimming.html">Question 2</a></li>
+                    <li><a href="/pages/employees.html">Question 3</a></li>
+                </ul>
+            </nav>
+
+            <h1>Emergency Response System</h1>
+
+            <div id="response-container">
+                <form id="response-form">
+                    <h2>Alert Type</h2>
+                    <div class="form-input">
+                        <div class="form-control">
+                            <label for="drillAlert">Drill</label>
+                            <input
+                                type="radio"
+                                name="alertType"
+                                id="drillAlert"
+                                value="drill"
+                                checked
+                            />
+                        </div>
+                        <div class="form-control">
+                            <label for="emergencyAlert">Emergency</label>
+                            <input
+                                type="radio"
+                                name="alertType"
+                                id="emergencyAlert"
+                                value="emergency"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-input form-message">
+                        <div class="form-control">
+                            <label for="alertMessage">Message</label>
+                            <div class="form-control">
+                                <textarea
+                                    type="text"
+                                    name="alertMessage"
+                                    id="alertMessage"
+                                    rows="6"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="alertButton">Alert</button>
+                </form>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </body>
+</html>

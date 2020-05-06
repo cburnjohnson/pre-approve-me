@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary: #181818;
+    --blue: #00aaff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Layout */
+#overlay {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    height: 96.2vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.6;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+}
+
+/* Navbar */
+.nav {
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em 0.25em;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--blue);
+}
+
+/* Hawaii */
+#hawaii-bg {
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/hawaii-bg.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+#response-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    margin-top: 3em;
+    background: #18181890;
+    overflow-y: auto;
+    max-height: 80%;
+}
+
+#response-form h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#response-form label {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+#response-form input {
+    cursor: pointer;
+}
+
+#response-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    resize: none;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-input {
+    display: flex;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.form-input.form-message {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#alertButton {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    padding: 0.35em 1em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(179, 58, 58, 1);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+#alertButton:hover {
+    box-shadow: 0 5px 15px rgba(170, 1, 20, 0.9);
+}
+
+/* Swimming Question */
+#swimming-bg {
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/swimming-bg.jpg');
+    background-size: 100% 100%;
+}
+
+#tableHeader {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+#tableData {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 1em;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+/* Employees Question */
+#employees-bg {
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/employees-bg.jpg') repeat-y;
+    background-size: 100% 100%;
+}
+
+.employees-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.employee-card {
+    background-color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    display: grid;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.employee-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+    #response-container {
+        width: 80%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    #response-container {
+        width: 70%;
+    }
+
+    .employees-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    #response-container {
+        width: 60%;
+    }
+
+    .employees-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1500px) {
+    #response-container {
+        width: 40%;
+    }
+}
